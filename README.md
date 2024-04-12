@@ -9,10 +9,13 @@ The goal of this project is to empower students and job seekers by providing the
 
 ## Technologies Used
 FastAPI
+
 AWS Cloud Computing
+
 Streamlit
+
 GPT (Generative Pre-trained Transformer)
-Machine Learning (ML)
+
 Natural Language Processing (NLP) libraries
 
 ## Important links
