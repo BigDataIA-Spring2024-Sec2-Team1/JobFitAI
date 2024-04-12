@@ -36,16 +36,33 @@ https://colab.research.google.com/drive/1vwibTnVArVEwQSnkbONi9QtV1oeIl9wV
 ```
      
 ## Learning Outcomes
-Hands-on experience with Web Scraping Techniques
-Proficiency in streamlit applicatons
-Understanding of Database Management and Integration
-Familiarity with open API
+Docker
+
+Understanding containerization concepts and how to create Docker images.
+Learning container orchestration and management for deploying applications.
+Familiarity with Dockerfile syntax and best practices for building efficient containers.
+
+FastAPI:
+
+Mastery of creating RESTful APIs using FastAPI framework.
+Understanding asynchronous programming and its benefits in web development.
+Proficiency in handling request routing, validation, and response generation with FastAPI.
+GPT (OpenAI):
+
+Knowledge of natural language processing (NLP) concepts and techniques.
+Understanding of GPT architecture and how it generates human-like text.
+Experience in integrating and utilizing GPT for text generation tasks such as resume analysis and keyword suggestion.
+Terraform (Infrastructure as Code):
+
+Understanding of Infrastructure as Code (IaC) principles and practices.
+Proficiency in writing Terraform configuration files to provision and manage cloud resources.
+Experience in automating infrastructure deployment, scaling, and management using Terraform.
 
 ## Team Information and Contribution 
 WE ATTEST THAT WE HAVEN’T USED ANY OTHER STUDENTS’ WORK IN OUR ASSIGNMENT AND ABIDE BY THE POLICIES LISTED IN THE STUDENT HANDBOOK
 
-Name            | Contribution %    | Contributions     |
-
-Aniket Giram    | 33.33%            |Backend Development |
-Sudarshan Dudhe | 33.33%            |Dockerize and Integration|
-Rasika Kole     | 33.33%            |Frontend Development|
+Name | Contribution %| Contributions |
+--- |--- | --- |
+Aniket Giram    | 33.33% |Backend and Docker |
+Sudarshan Dudhe | 33.33% |Frontend and Integrations |
+Rasika Kole     | 33.33% |Documentation and Frontend |
