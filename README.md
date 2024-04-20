@@ -58,6 +58,13 @@ Understanding of Infrastructure as Code (IaC) principles and practices.
 Proficiency in writing Terraform configuration files to provision and manage cloud resources.
 Experience in automating infrastructure deployment, scaling, and management using Terraform.
 
+
+#How to run
+
+Building dependencies
+
+`./setup.sh` if you get a permission error then run `chmod +x setup.sh` and retry the execution
+
 ## Team Information and Contribution 
 WE ATTEST THAT WE HAVEN’T USED ANY OTHER STUDENTS’ WORK IN OUR ASSIGNMENT AND ABIDE BY THE POLICIES LISTED IN THE STUDENT HANDBOOK
 
