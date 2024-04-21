@@ -1,0 +1,3 @@
+pydparser
+streamlit
+streamlit-authenticator
