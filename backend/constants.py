@@ -11,7 +11,8 @@ RESUME_SECTIONS_GRAD = [
     'objective',
     'career objective',
     'summary',
-    'leadership',
-    'extracurricular'
-    'extracurricular activity'
+    'leadership'
 ]
+
+EMBEDDING_MODEL = "text-embedding-3-small"
+JOB_FIT_INDEX_NAME = 'job-fit'

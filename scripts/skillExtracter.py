@@ -1,12 +1,12 @@
 import requests
 import json
-import en_core_web_lg
+import en_core_web_sm
 from spacy.matcher import PhraseMatcher
 from skillNer.general_params import SKILL_DB
 from skillNer.skill_extractor_class import SkillExtractor
 from util import getAccessToken
 
-nlp = en_core_web_lg.load()
+nlp = en_core_web_sm.load()
 skill_extractor = SkillExtractor(nlp, SKILL_DB, PhraseMatcher)
 
 def extractKeywordFromSkillNer(text):

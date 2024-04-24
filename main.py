@@ -64,13 +64,16 @@ def cleanExperienceSection(text, date=False, output_format="array"):
         else:
             return text_without_dates
 
-# file_path = 'data/resumes/pdf/Anupama_resume.pdf'
-file_path = 'data/resumes/docx/Vivek.BSA.docx'
-# data = ResumeParser(file_path).get_extracted_data()
-# print(data)
-
+file_path = 'data/resumes/pdf/resume_Meyer.pdf'
+data = ResumeParser(file_path).get_extracted_data()
+print(data)
 # if not len(data.get("experience")):
 text = utils.extract_text(file_path, f".{file_path.split('/')[-1].split('.')[-1]}")
-print(text)
-#     cc= extract_entity_sections_grad(text)
-#     print("Text without year", cleanExperienceSection(cc.get("experience"), False, "str"))
+# print(text)
+# cc= extract_entity_sections_grad(text)
+# print(cc)
+# exp = cleanExperienceSection(cc.get("experience"), False, "str")
+# print(exp)
+# print(data.get("skills"))
+# else:
+#     print(data)
