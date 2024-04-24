@@ -2,8 +2,7 @@ FROM python:3.9-slim
 
 WORKDIR /app
 
-ARG S3_BUKET_NAME
-ENV S3_BUKET_NAME=${S3_BUKET_NAME}
+
 
 RUN pip install streamlit
 
