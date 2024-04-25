@@ -2,8 +2,10 @@ import streamlit as st
 import streamlit_authenticator as stauth
 import yaml
 from yaml.loader import SafeLoader
+import os
 
-with open('../cred.yaml') as file:
+print("current dir",  os.getcwd())
+with open('/app/cred.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
 
 authenticator = stauth.Authenticate(
@@ -32,7 +34,7 @@ def register():
         st.error(e)
 
 def writeConfig():
-    with open('../cred.yaml', 'w') as file:
+    with open('/app/cred.yaml', 'w') as file:
         yaml.dump(config, file, default_flow_style=False)
 
 # if st.session_state["authentication_status"]:

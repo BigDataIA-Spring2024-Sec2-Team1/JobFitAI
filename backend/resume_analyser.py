@@ -1,5 +1,7 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.responses import JSONResponse
+import nltk
+nltk.download('stopwords')
 from utils import upload_to_s3, parseResume, skillsSimilarity, suggestKeywords
 from pydantic import BaseModel
 from typing import List

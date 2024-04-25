@@ -1,11 +1,10 @@
 pydparser
-streamlit
-streamlit-authenticator
-python-docx
-PyPDF2
 fastapi
 uvicorn
 boto3
 python-dotenv
 python-multipart
 requests
+openai
+pinecone-client
+nltk
