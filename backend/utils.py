@@ -13,7 +13,7 @@ from pinecone import Pinecone
 import os
 import warnings
 warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
-warnings.filterwarnings("ignore", category=DeprecationWarning) 
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 from dotenv import load_dotenv
 load_dotenv()
 import os
@@ -147,14 +147,14 @@ def extractKeywordFromLightSkillAPI(text, token):
             "text": text,
             "confidenceThreshold": 0.5
         }
-       
+
         response = requests.request("POST", url, json=payload, headers=headers)
-        
+
         res = json.loads(response.text)
-       
+
         if "message" in res and res["message"] == "Token expired": raise Exception("TOKEN_EXPIRED")
 
-        skills = [] 
+        skills = []
         for i in res['data']:
             skills.append(i["skill"]["name"])
         return skills
@@ -180,8 +180,10 @@ def skillsSimilarity(skills, namespace, resume_text):
         index = pc.Index(JOB_FIT_INDEX_NAME)
         skills_embedding = client.embeddings.create(input=skills, model=EMBEDDING_MODEL).data[0].embedding
         match_res = index.query(top_k=2, vector=skills_embedding, namespace=namespace, include_metadata=True)
+        jd_match_res = index.query(top_k=3, vector=skills_embedding, namespace="skills", include_metadata=True)
         designations = []
         _similar_skills = []
+        jd_skills = []
         for i in match_res["matches"]:
             meta = i["metadata"]["metadata"]
             meta = eval(meta)
@@ -192,8 +194,12 @@ def skillsSimilarity(skills, namespace, resume_text):
                 for j in meta.get("designation"):
                     if j and len(j) < 50:
                         designations.append(j)
+        for i in jd_match_res["matches"]:
+            jd_meta = i["metadata"]["extras"]
+            jd_meta = eval(jd_meta)
+            jd_skills.append(jd_meta.get("skills"))
         newDesig = user_categorization_gpt(skills, resume_text, designations)
-        return {"similar_profile_skills": _similar_skills, "designations":[newDesig.split(":")[-1]]}
+        return {"similar_profile_skills": _similar_skills, "designations":[newDesig.split(":")[-1]], "jd_skills": jd_skills}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"An unexpected error occurred: {e}")
 
@@ -225,14 +231,14 @@ def user_categorization_gpt(skills, resume_text, designation):
     try:
         system_role = "You are a Hiring Manager tasked with analyzing a candidate's resume and skills to suggest the most appropriate job title. Your role involves a detailed evaluation of the experience and project section of the resume to determine a fitting designation, based on the provided information."
         prompt = f"""
-            As a Hiring Manager, your task is to evaluate the candidate's resume and skills to suggest an appropriate job title. 
+            As a Hiring Manager, your task is to evaluate the candidate's resume and skills to suggest an appropriate job title.
             Based on the provided resume details, skill set and possible designations, determine the most fitting designation for the candidate.
 
             - Resume Details: \n{resume_text}\n
             - Skills: \n{skills}\n
             - Possible Designations: \n{designation}\n
 
-            Focus on the experience and project section of the resume to assess the candidate's qualifications and suggest a suitable job title. 
+            Focus on the experience and project section of the resume to assess the candidate's qualifications and suggest a suitable job title.
             Please Strictly adhere to the format provided in the example below when giving your recommendation.
 
             Example:
@@ -250,8 +256,8 @@ def suggestKeywords(similar_skills, resume_text, designation, num_of_skills):
     try:
         system_role = "You are a Senior Hiring Manager tasked with analyzing a candidate's resume and skills to suggest the most appropriate keywords and skills. Your role involves a detailed evaluation of the experience and project section of the resume to determine a fitting skills, based on the provided information."
         prompt = f"""
-            As a Hiring Manager, your task is to evaluate the candidate's resume and skills to suggest an appropriate skills required for the job. 
-            Based on the provided resume details, skills which are mostly seen in similar profile and designations, 
+            As a Hiring Manager, your task is to evaluate the candidate's resume and skills to suggest an appropriate skills required for the job.
+            Based on the provided resume details, skills which are mostly seen in similar profile and designations,
             your task is to Suggest the NEW list of keywords to improve the resume for the candidate.
             Ensure that the newly suggested keywords are not already mentioned in the candidate's resume details but are relevant and derived from similar skills.
             - Resume Details: \n{resume_text}\n
@@ -270,7 +276,7 @@ def suggestKeywords(similar_skills, resume_text, designation, num_of_skills):
         prompt += prompt_res_fmt
 
         prompt_for_top_k = f"""
-            As a Hiring Manager, your objective is to identify and rank the top {num_of_skills} skills necessary for a specific job title. 
+            As a Hiring Manager, your objective is to identify and rank the top {num_of_skills} skills necessary for a specific job title.
             This task involves analyzing a list of skills and matching them to job titles to determine the most relevant and critical skills for each role.
             Please follow the instructions below to complete this task:
 

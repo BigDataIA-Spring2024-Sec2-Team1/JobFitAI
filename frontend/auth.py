@@ -4,8 +4,8 @@ import yaml
 from yaml.loader import SafeLoader
 import os
 
-print("current dir",  os.getcwd())
-with open('/app/cred.yaml') as file:
+path = "/app/cred.yaml"
+with open(path) as file:
     config = yaml.load(file, Loader=SafeLoader)
 
 authenticator = stauth.Authenticate(
