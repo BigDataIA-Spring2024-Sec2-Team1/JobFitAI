@@ -3,6 +3,8 @@ import requests
 import json
 
 def job_fit_score():
+    if "score" not in st.session_state:
+        st.session_state["score"] = ""
 
     url = "http://localhost:8000"
 
@@ -13,6 +15,13 @@ def job_fit_score():
             score = requests.post(f"{url}/get-job-match-score", json={"username": st.session_state.get("username"), "skills": [], "job_description": job_description})
 
             if score.status_code == 200:
+                st.session_state["score"] = score.json()
                 st.write(score.json())
+        
+        if st.button("Get Recommandation"):
+            bullet_points = requests.post(f"{url}/get-experience-bullet-points", json={"username": st.session_state.get("username"), "job_description": job_description, "skills":st.session_state["score"].get("missing_skills"), "resume_text": st.session_state.get("resume_text")})
+            for i in bullet_points.json():
+                st.write("Some Suggested Bullet Points for Resume: Experience - ", i.get("name"))
+                st.write(i.get("bullet_point"))
     else:
         st.write(f"No resume attached to profile, please upload a resume inn Job Analyser")

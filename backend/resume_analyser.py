@@ -3,7 +3,7 @@ from fastapi.responses import JSONResponse
 import nltk
 nltk.download('stopwords')
 from utils import upload_to_s3, parseResume, skillsSimilarity, suggestKeywords, addSkillToUserDB
-from job_match_score import getJobMatchScore
+from job_match_score import getJobMatchScore, getExperienceBulletPoints
 from pydantic import BaseModel
 from typing import List
 
@@ -90,6 +90,22 @@ class GetJobMatchScore(BaseModel):
 def get_job_match_score(request: GetJobMatchScore):
     try:
         response = getJobMatchScore(request.skills, request.username, request.job_description)
+        return JSONResponse(status_code=200, content=response)
+    except HTTPException as http_exc:
+        return JSONResponse(status_code=http_exc.status_code, content={"detail": http_exc.detail})
+    except Exception as e:
+        return JSONResponse(status_code=500, content={"detail": f"An unexpected error occurred: {str(e)}"})
+
+class GetExperienceBulletPoints(BaseModel):
+    username: str
+    job_description: str
+    resume_text: str
+    skills: List[str]
+
+@app.post("/get-experience-bullet-points")
+def get_job_match_score(request: GetExperienceBulletPoints):
+    try:
+        response = getExperienceBulletPoints(request.resume_text, request.skills, request.username, request.job_description)
         return JSONResponse(status_code=200, content=response)
     except HTTPException as http_exc:
         return JSONResponse(status_code=http_exc.status_code, content={"detail": http_exc.detail})
