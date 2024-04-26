@@ -16,7 +16,26 @@ def job_fit_score():
 
             if score.status_code == 200:
                 st.session_state["score"] = score.json()
-                st.write(score.json())
+                
+                st.write("JobFit Score: ", score.json().get("match_percentage"))
+                st.write("Matched Skills from your resume")
+
+                num_of_columns = 3
+                _presentcolumns = st.columns(num_of_columns)
+
+                for i, skill in enumerate(score.json().get("matched_skills")):
+                    with _presentcolumns[i % num_of_columns]:
+                        st.button(skill, key=f"{i}{skill}")
+
+                st.write("Missing Skills from your resume")
+
+                num_of_columns = 3
+                columns = st.columns(num_of_columns)
+
+                for i, skill in enumerate(score.json().get("missing_skills")):
+                    with columns[i % num_of_columns]:
+                        st.button(skill, key=f"{i}{skill}")
+                # st.write(score.json())
         
         if st.button("Get Recommandation"):
             bullet_points = requests.post(f"{url}/get-experience-bullet-points", json={"username": st.session_state.get("username"), "job_description": job_description, "skills":st.session_state["score"].get("missing_skills"), "resume_text": st.session_state.get("resume_text")})
