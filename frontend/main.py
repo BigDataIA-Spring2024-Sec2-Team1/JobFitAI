@@ -2,6 +2,8 @@ import streamlit as st
 from auth import login, logout, register
 from resume_analyser import resume_analyser
 from job_fit_score import job_fit_score
+from job_recomendation import get_job_recommendations
+
 
 def initialize_session_state():
     if "authentication_status" not in st.session_state:
@@ -15,10 +17,12 @@ def initialize_session_state():
     if "resume_file_name" not in st.session_state:
         st.session_state["resume_file_name"] = ""
 
+
 def page_navigation():
     if st.session_state.get("authentication_status", False):
         st.sidebar.title(f"Hello {st.session_state.get('name')}")
-        page = st.sidebar.radio("", ("Resume Analyser", "Job Fit Score", "Page 2"))
+        page = st.sidebar.radio(
+            "", ("Resume Analyser", "Job Fit Score", "Page 2"))
 
         if page == "Resume Analyser":
             resume_analyser()
@@ -27,6 +31,7 @@ def page_navigation():
         elif page == "Page 2":
             st.title("Page 2")
             st.write("This is Page 2.")
+            get_job_recommendations()
 
         logout()
     else:
@@ -44,9 +49,11 @@ def page_navigation():
         with _register:
             register()
 
-def main():
-    initialize_session_state()
-    page_navigation()
 
-if __name__ == "__main__":
-    main()
+# def main():
+initialize_session_state()
+page_navigation()
+
+
+# if __name__ == "__main__":
+#     main()

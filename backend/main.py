@@ -76,13 +76,16 @@ class JobPosting(BaseModel):
         # Validate and parse the dictionary into the Pydantic model
         return cls(**obj)
 
+
 class UserSkillDB(BaseModel):
     skills: List[str]
     username: str
-    
+
+
 class UserName(BaseModel):
     username: str
-    
+
+
 @app.post("/getJobSuggesions")
 def getSuggesions(request: UserName):
     username = request.username
