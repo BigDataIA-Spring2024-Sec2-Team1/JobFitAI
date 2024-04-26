@@ -4,12 +4,6 @@ cookie:
   name: some_cookie_name
 credentials:
   usernames:
-    abc:
-      email: jsmith@gmail.com
-      failed_login_attempts: 0
-      logged_in: false
-      name: John Smith
-      password: $2b$12$S6vBKodNi4ELJk.OnhGV6u7EuD3FOzHnXe4ItNrXvGJymzw0WeGfi
     pqr:
       email: pqr@gmail.com
       failed_login_attempts: 0
