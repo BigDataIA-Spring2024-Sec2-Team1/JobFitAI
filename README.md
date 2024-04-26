@@ -21,7 +21,6 @@
 The "JobFit AI" project introduces an innovative AI-driven Applicant Tracking System (ATS) aimed at optimizing the resume tailoring process. It facilitates seamless communication between users and the application through a Streamlit frontend and FastAPI backend. By leveraging cutting-edge technologies such as OpenAI's GPT, the system offers personalized suggestions for resume enhancement, empowering users to tailor their resumes to specific job requirements effectively.
 
 ## Problem Statement :construction:
-## Problem Statement :construction sign:
 ### Current Challenges
 Many students face significant challenges in efficiently screening job descriptions, analyzing the skills required, comparing with their resumes and updating their resumes and gaining expertise in skills they are lagging behind during the application process. Some common challenges include:
 1. Limited Guidance: Many students or applicants lack guidance on how to optimize their resumes for specific job roles or industries, leading to missed opportunities in the job market.
@@ -85,7 +84,7 @@ openai==0.27.0
 🖼streamlit==1.18.1
 ```
 
-## Project Folder Structure :folder:
+## Project Folder Structure :
 
 ```
 📦 Final-Project-Playground
@@ -204,7 +203,7 @@ docker-compose up
 - https://github.com/openai/openai-cookbook/blob/main/examples/vector_databases/pinecone/GPT4_Retrieval_Augmentation.ipynb
 
 
-## Learning Outcomes :graduation cap:
+## Learning Outcomes :mortar board:
 List the learning outcomes from the assignment/project
 ### Technical skills:
 1. Proficiency in Natural Language Processing (NLP): Gain proficiency in leveraging OpenAI's GPT API for analyzing and processing text data from resumes and job descriptions.
@@ -212,7 +211,7 @@ List the learning outcomes from the assignment/project
 3. Understanding of AI-driven Systems: Develop an understanding of how AI-driven systems can be integrated into applications to provide personalized recommendations and enhance user experiences.
 4. Knowledge of API Integration: Learn how to integrate external APIs, such as the LinkedIn API, for fetching real-time job descriptions and enhancing the system's recommendation capabilities.
 5. Data Management and Storage: Gain experience in managing and storing large datasets, including resumes and job descriptions, using technologies like Amazon S3 for data storage and retrieval.
-### Softskills
+### Softskills:
 1. Problem-Solving Abilities: Discuss how the project challenged participants to think critically, solve problems, and overcome obstacles.
 2. Project Management Skills: Highlight any experience gained in project planning, organization, task management, and collaboration within a team.
 3. Communication and Collaboration: Reflect on the effectiveness of communication and collaboration within the team, including teamwork, leadership, and interpersonal skills.
