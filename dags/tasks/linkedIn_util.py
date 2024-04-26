@@ -30,8 +30,8 @@ def get_jobs_details(**kwargs):
         print("get_jobs_details")
         print("get_jobs_details")
         ti = kwargs['ti']
-        search_keywords = ""
-        _limit = 100
+        search_keywords = "Full Stack Developer"
+        _limit = 50
         location = "USA"
         jobs = api.search_jobs(keywords=search_keywords,
                                limit=_limit,

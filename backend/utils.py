@@ -402,6 +402,7 @@ def getJobSuggesions(username=""):
                                         "description": doc["description"],
                                         "listed_at": doc["listed_at"],
                                         "job_id": doc["job_id"],
+                                        "apply_url":doc["apply_url"],
                                         "job_posted": doc["job_posted"]}
                             job_descriptions.append(job_desc)
                     else:
