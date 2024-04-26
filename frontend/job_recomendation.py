@@ -5,11 +5,12 @@ import requests
 
 def get_job_recommendations():
     st.title("Job Recommendations")
+    st.write("Here's your Job Recommendation")
     print("_username")
     print(st.session_state.get("username"))
     # Calculate the width of each column dynamically
     if st.button("Get Job Recommendations"):
-        url = "http://localhost:8000"
+        url = "http://backend:8000"
         _username = st.session_state.get("username")
         print(_username)
         print("username is", _username)
