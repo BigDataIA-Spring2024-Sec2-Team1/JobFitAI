@@ -1,44 +1,45 @@
-# AIssue Flow :zap: [![Continuous Integration - Unit Testing](https://github.com/BigDataIA-Spring2023-Team-04/Final-Project-Playground/actions/workflows/pytest.yml/badge.svg?branch=main)](https://github.com/BigDataIA-Spring2023-Team-04/Final-Project-Playground/actions/workflows/pytest.yml)
+# JobFit AI
 
 ## Live application Links :octopus:
 
 - Please use this application responsibly, as we have limited free credits remaining.
 
-[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)](http://34.148.167.159:8051/)
+[![Streamlit](<ADDLINK>)
 
-[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=FastAPI&logoColor=white)](http://34.148.167.159:8050/docs)
+[![FastAPI](<ADDLINK>)
 
-[![Apache Airflow](https://img.shields.io/badge/Apache_Airflow-007A88?style=for-the-badge&logo=Apache%20Airflow&logoColor=white)](http://34.138.127.169:8080/)
+[![Apache Airflow](<ADDLINK>)
 
-[![Great Expectations](https://img.shields.io/badge/Great_Expectations-FF5733?style=for-the-badge)](http://getest1.s3-website-us-east-1.amazonaws.com)
+[![codelabs](https://codelabs-preview.appspot.com/?file_id=1vgMyIUyW9-KYcdxPMUs-lFjF9gVwKMT2BpwPWluPthc/edit#0)
 
-[![codelabs](https://img.shields.io/badge/codelabs-4285F4?style=for-the-badge&logo=codelabs&logoColor=white)](https://codelabs-preview.appspot.com/?file_id=1blarGD_LQ5o5aGcJWiKKbhDBissQSL9qfs28dx5HyFk#11)
-
-[![Demo Link](https://img.shields.io/badge/Demo_Link-808080?style=for-the-badge&logo=YouTube&logoColor=white)](https://youtu.be/DnmAYNL0kcI)
-
-
-
-
+[![Demo Link](<ADDLINK>)
 
 
 
 ## Abstract :memo: 
 
-The rapid growth of software development projects on GitHub necessitates efficient and intelligent issue management solutions. AIssueFlow is a novel, real-time adaptive intelligence system designed to streamline the process of managing GitHub issues. The system retrieves open issues in real-time and employs a pre-trained BERT model to generate embeddings, which are then stored in a Snowflake database. By leveraging the Milvus similarity search engine, AIssueFlow identifies and returns similar issues, enabling the scrum master to make informed assignment decisions based on developers' domain expertise.
+The "JobFit AI" project introduces an innovative AI-driven Applicant Tracking System (ATS) aimed at optimizing the resume tailoring process. It facilitates seamless communication between users and the application through a Streamlit frontend and FastAPI backend. By leveraging cutting-edge technologies such as OpenAI's GPT, the system offers personalized suggestions for resume enhancement, empowering users to tailor their resumes to specific job requirements effectively.
 
-Furthermore, AIssueFlow features an analytics page, providing users with insights into their API usage history, and an admin page, allowing administrators to add repositories to the system. This comprehensive solution not only enhances issue management efficiency but also promotes better collaboration and productivity within software development teams. Through the integration of state-of-the-art technologies, such as BERT embeddings, Milvus similarity search, and Snowflake storage, AIssueFlow represents the next generation of intelligent GitHub issue management.
+## Problem Statement :Construction:
+### Current Challenges
+Many students face significant challenges in efficiently screening job descriptions, analyzing the skills required, comparing with their resumes and updating their resumes and gaining expertise in skills they are lagging behind during the application process. Some common challenges include:
+1. Limited Guidance: Many students or applicants lack guidance on how to optimize their resumes for specific job roles or industries, leading to missed opportunities in the job market.
+2. Time-Consuming Process: Manual resume optimization can be time-consuming and labor-intensive, especially for individuals with limited experience or resources.
+3. Competitive Job Market: In a competitive job market, it's essential for resumes to stand out and effectively showcase candidates' qualifications and skills.
+4. Lack of Personalization: Generic resume templates and advice may not adequately address individual strengths, experiences, and career goals.
 
 ## Project Goals :dart:
 
-1. Scrape issue-related data from various GitHub repositories using the GitHub API and store it in a Snowflake database along with associated metadata.
-2. Use the BERT model to convert issue bodies into vector embeddings and store them in a Milvus database for efficient similarity search.
-3. Develop two main functions, Git Magnet and Git Cognizant, to make the project more user-friendly.
-4. Use the GPT 3.5 Turbo model to summarize issues and leverage Milvus to find similar issues for the selected issue.
-5. If no similar issues are found, provide assistance to the user through the GPT 3.5 Turbo to find potential solutions to the issue, using prompt enginerring.
+1. Leverage Pydantic or NLP to extract key skills and experience from resumes.
+2. Compare extracted data with job requirements and provide personalized improvement suggestions.
+3. Utilize user data and APIs to recommend relevant job openings.
+4. Tailor resumes to match job descriptions through keyword analysis and suggestion generation.
+5. Integrate Chat GPT (or similar) for enhanced and refined resume improvement recommendations.
+6. Develop a user-friendly Streamlit application for a seamless user experience.
 
 ## Use case :bookmark_tabs:
 
-The use case for this project could be to help software developers and teams better manage their projects on GitHub. By using the GitHub API to scrape issue-related data, storing it in a database, and leveraging advanced NLP and vector similarity algorithms, developers can more easily search for and find relevant issues, as well as summarize them for quicker understanding. This can lead to faster issue resolution and more efficient project management overall.
+Job seekers struggling to tailor their resumes for specific job roles can leverage JobFit AI. By uploading their resume and a desired job description, JobFit AI analyzes both documents. It  identifies missing skills, suggests targeted improvements, and recommends relevant job openings based on the user's experience. This empowers job seekers to present strong resumes and increase their chances of landing their dream job.
 
 ## Technologies Used :computer:
 
@@ -55,69 +56,35 @@ The use case for this project could be to help software developers and teams bet
 
 ## Data Source :flashlight:
 
-The data source for this project is the GitHub API, which provides access to all the issue-related data for public repositories. 
+Dataset consisting of job descriptions and resumes obtained from various sources are used as data sources.
 
-## Process Outline
-
-**1. Data Collection:** Use GitHub API to extract issue-related data from various repositories and store it in a Snowflake database.
-
-**2. Data Preprocessing:** Clean and preprocess the collected data to make it suitable for analysis.
-
-**3. Feature Extraction:** Use the BERT model to extract vector embeddings from the issue body text.
-
-**4. Data Validation:** Use Great Expectations to validate the collected data and ensure it meets the expected format and values.
-
-**5. Vector Embedding:** Use the BERT model to convert issue bodies into vector embeddings and store them in a Milvus database.
-
-**6. Similarity Search:** Use Milvus to search for similar issues based on the generated vector embeddings.
-
-**7. User Interface:** Build a web application using Streamlit to provide an intuitive interface for users to search and explore the collected issue data and its embeddings.
-
-**8. Testing:** Use pytest for unit testing to ensure the functionality of the application and its components.
-
-**9. Deployment:** Host the application in cloud and deploy it using Airflow and a GCP instance.
+## Process Outline :Counterclockwise Arrows:
+**1. Data Acquisition:** Users upload their resumes and desired job descriptions through a user-friendly interface.
+**2. Data Processing:** Utilize Pydantic or NLP techniques to extract key skills and experience from resumes.
+**3. Analysis and Recommendations:**
+- Compare extracted data with pre-defined skills or job requirements.
+- Recommend improvements to the resume based on the job description and missing skills.
+- Leverage APIs (e.g., LinkedIn) to suggest relevant job postings.
+**4. AI-powered Enhancement:** Integrate Chat GPT (or similar) to generate insightful and personalized suggestions for further resume optimization.
+**5. User Interface:** Develop a user-friendly Streamlit application to display extracted skills, recommended improvements, job recommendations, and AI-powered suggestions.
 
 ## Project Setup
 
 <img width="607" alt="image" src="https://user-images.githubusercontent.com/114537365/234988315-a9f89c76-b0ac-413c-9f4b-977eb7c5eab9.png">
 
 
-## Requirements
+## Requirements :Briefcase:
 ```
 fastapi==0.92.0
 
-passlib==1.7.4
-
 pydantic==1.10.4
 
-python-dotenv==1.0.0
-
-:snake: python-jose==3.3.0
-
-snowflake-connector-python==3.0.2
-
-snowflake-sqlalchemy==1.4.7
-
-:open_file_folder: SQLAlchemy==1.4.47
-
-gunicorn==20.1.0
-
-uvicorn==0.20.0
-
-python-multipart
-
-🔢 numpy==1.23.5
-
 openai==0.27.0
-
-pymilvus==2.2.6
-
-transformers==4.27.4
 
 🖼streamlit==1.18.1
 ```
 
-## Project Folder Structure
+## Project Folder Structure :Folder:
 
 ```
 📦 Final-Project-Playground
@@ -177,7 +144,7 @@ transformers==4.27.4
 ©generated by [Project Tree Generator](https://woochanleee.github.io/project-tree-generator)
 
 
-## How to run Application locally
+## How to run Application locally :Rocket:
 
 To run the application locally, follow these steps:
 
@@ -215,7 +182,7 @@ docker-compose up airflow-init && docker-compose up -d
 
 5. Access the Airflow UI by navigating to http://localhost:8080/ in your web browser.
 
-6. To run the DAGs in Airflow, click on the dags links on the Airflow UI and toggle the switch to enable the DAGs.
+6. To run the DAG in Airflow, click on the dag link on the Airflow UI and toggle the switch to enable the DAGs.
 
 7. Once the DAGs have run successfully, start the Streamlit application by running the following command from the streamlit-app directory:
 
@@ -223,21 +190,39 @@ docker-compose up
 
 8. Access the Streamlit UI by navigating to http://localhost:8501/ in your web browser.
 
-9. Enter GitHub username and select a repository from the dropdown menu to view the issues associated with that repository. You can summarize or find similar issues using the options provided on the UI.
-
 ## Github Actions - Testing
 
 <img width="1512" alt="image" src="https://user-images.githubusercontent.com/114537365/235001553-2dc11cd4-9131-48d2-a57b-75b302aeb372.png">
 
+## References :Books:
+- https://code.visualstudio.com/docs/python/tutorial-fastapiLinks
+- https://aws.amazon.com/s3/
+- https://github.com/Coding-Crashkurse/Pydantic-v2-crashcourseLinks to an external site.
+- https://docs.pinecone.io/guides/getting-started/quickstart/Using_Pinecone_for_embeddings_search.ipynb
+- https://github.com/openai/openai-cookbook/blob/main/examples/vector_databases/pinecone/
+- https://github.com/openai/openai-cookbook/blob/main/examples/vector_databases/pinecone/GPT4_Retrieval_Augmentation.ipynb
 
 
-## Team Information and Contribution 
+## Learning Outcomes :Graduation Cap:
+List the learning outcomes from the assignment/project
+### Technical skills:
+1. Proficiency in Natural Language Processing (NLP): Gain proficiency in leveraging OpenAI's GPT API for analyzing and processing text data from resumes and job descriptions.
+2. Experience with Streamlit and FastAPI: Acquire familiarity with building interactive web applications using Streamlit for the frontend and FastAPI for the backend, including handling user input, authentication, and data communication.
+3. Understanding of AI-driven Systems: Develop an understanding of how AI-driven systems can be integrated into applications to provide personalized recommendations and enhance user experiences.
+4. Knowledge of API Integration: Learn how to integrate external APIs, such as the LinkedIn API, for fetching real-time job descriptions and enhancing the system's recommendation capabilities.
+5. Data Management and Storage: Gain experience in managing and storing large datasets, including resumes and job descriptions, using technologies like Amazon S3 for data storage and retrieval.
+### Softskills
+1. Problem-Solving Abilities: Discuss how the project challenged participants to think critically, solve problems, and overcome obstacles.
+2. Project Management Skills: Highlight any experience gained in project planning, organization, task management, and collaboration within a team.
+3. Communication and Collaboration: Reflect on the effectiveness of communication and collaboration within the team, including teamwork, leadership, and interpersonal skills.
 
-Name | NUID | Contribution 
---- | --- | --- |
-Karan Agrawal | 001090008 | 25% 
-Lokeshwaran Venugopal Balamurugan | 002990533 | 25% 
-Sivaranjani S | 002742197 | 25% 
-Rishabh Singh | 002743830 | 25% 
+
+## Team Information and Contribution :Handshake:
+
+Name            | Contribution % | Contribution                         |
+---             | ---            | ---                                  |
+Aniket Giram    | 33.33%         |Text, keywords extraction, Embeddings |
+Sudarshan Dudhe | 33.33%         |Backend, pytest, testing              |
+Rasika Kole     | 33.33%         |Frontend, Backend, Documentation      |
 
 
