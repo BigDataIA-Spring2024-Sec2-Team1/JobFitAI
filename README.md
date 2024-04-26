@@ -20,7 +20,7 @@
 
 The "JobFit AI" project introduces an innovative AI-driven Applicant Tracking System (ATS) aimed at optimizing the resume tailoring process. It facilitates seamless communication between users and the application through a Streamlit frontend and FastAPI backend. By leveraging cutting-edge technologies such as OpenAI's GPT, the system offers personalized suggestions for resume enhancement, empowering users to tailor their resumes to specific job requirements effectively.
 
-## Problem Statement :Construction:
+## Problem Statement :Construction Sign:
 ### Current Challenges
 Many students face significant challenges in efficiently screening job descriptions, analyzing the skills required, comparing with their resumes and updating their resumes and gaining expertise in skills they are lagging behind during the application process. Some common challenges include:
 1. Limited Guidance: Many students or applicants lack guidance on how to optimize their resumes for specific job roles or industries, leading to missed opportunities in the job market.
@@ -58,7 +58,7 @@ Job seekers struggling to tailor their resumes for specific job roles can levera
 
 Dataset consisting of job descriptions and resumes obtained from various sources are used as data sources.
 
-## Process Outline :Counterclockwise Arrows:
+## Process Outline :Clockwise Rightwards and Leftwards Open Circle Arrows:
 **1. Data Acquisition:** Users upload their resumes and desired job descriptions through a user-friendly interface.
 **2. Data Processing:** Utilize Pydantic or NLP techniques to extract key skills and experience from resumes.
 **3. Analysis and Recommendations:**
