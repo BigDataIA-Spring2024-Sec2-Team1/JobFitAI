@@ -28,7 +28,6 @@ def resume_analyser():
         if st.button("Upload to S3"):
             files = {"file": (uploaded_file.name, uploaded_file.getvalue())}
             response = requests.post(f"{url}/upload", files=files)
-
             if response.status_code == 200:
                 st.toast("File uploaded successfully to S3! We are currently parsing your resume")
                 parse_resume_res = requests.post(f"{url}/parse-resume", files=files)
@@ -36,15 +35,19 @@ def resume_analyser():
                     print("resume successfully parsed")
                     st.session_state.resume_text =  parse_resume_res.json().get("text")
                     st.session_state.user_resume_keywords.append(parse_resume_res.json().get("skills"))
-                    user_categorization_res = requests.post(f"{url}/user-categorization", json={"skills": parse_resume_res.json().get("skills"), "namespace": "resume_skills", "resume_text": parse_resume_res.json().get("text")})
-                    if user_categorization_res.status_code == 200:
-                        st.session_state.similar_user_keywords.append(user_categorization_res.json().get("similar_profile_skills"))
-                        st.session_state.jd_match_skills.append(user_categorization_res.json().get("jd_skills"))
-                        st.toast("Resume Parsing and User Categorization Successfull")
-                        st.session_state.user_designations = user_categorization_res.json().get("designations")
-                        st.session_state.user_designations.append("Other")
+                    add_user_skills_db = requests.post(f"{url}/add-user-skills-to-db", json={"skills": parse_resume_res.json().get("skills"), "username": st.session_state.get("username")})
+                    if add_user_skills_db.status_code == 200:
+                        user_categorization_res = requests.post(f"{url}/user-categorization", json={"skills": parse_resume_res.json().get("skills"), "namespace": "resume_skills", "resume_text": parse_resume_res.json().get("text")})
+                        if user_categorization_res.status_code == 200:
+                            st.session_state.similar_user_keywords.append(user_categorization_res.json().get("similar_profile_skills"))
+                            st.session_state.jd_match_skills.append(user_categorization_res.json().get("jd_skills"))
+                            st.toast("Resume Parsing and User Categorization Successfull")
+                            st.session_state.user_designations = user_categorization_res.json().get("designations")
+                            st.session_state.user_designations.append("Other")
+                        else:
+                            st.error("Failed in User Categorization")
                     else:
-                        st.error("Failed in User Categorization")
+                        st.error("Error in Storing users skills")
                 else:
                     st.error("Failed in Parsing resume")
             else:

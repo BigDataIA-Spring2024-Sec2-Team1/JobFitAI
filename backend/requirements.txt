@@ -8,3 +8,4 @@ requests
 openai
 pinecone-client
 nltk
+pymongo

@@ -2,7 +2,8 @@ from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.responses import JSONResponse
 import nltk
 nltk.download('stopwords')
-from utils import upload_to_s3, parseResume, skillsSimilarity, suggestKeywords
+from utils import upload_to_s3, parseResume, skillsSimilarity, suggestKeywords, addSkillToUserDB
+from job_match_score import getJobMatchScore
 from pydantic import BaseModel
 from typing import List
 
@@ -59,6 +60,36 @@ class SuggestKeywordRequest(BaseModel):
 def keyword_suggestion(request: SuggestKeywordRequest):
     try:
         response = suggestKeywords(request.similar_skills, request.resume_text, request.designation, request.num_of_skills)
+        return JSONResponse(status_code=200, content=response)
+    except HTTPException as http_exc:
+        return JSONResponse(status_code=http_exc.status_code, content={"detail": http_exc.detail})
+    except Exception as e:
+        return JSONResponse(status_code=500, content={"detail": f"An unexpected error occurred: {str(e)}"})
+
+class AddSkillToUserDB(BaseModel):
+    skills: List[str]
+    username: str
+
+@app.post("/add-user-skills-to-db")
+def add_skills_to_user_db(request: AddSkillToUserDB):
+    try:
+        response = addSkillToUserDB(request.skills, request.username)
+        return JSONResponse(status_code=200, content=response)
+    except HTTPException as http_exc:
+        return JSONResponse(status_code=http_exc.status_code, content={"detail": http_exc.detail})
+    except Exception as e:
+        return JSONResponse(status_code=500, content={"detail": f"An unexpected error occurred: {str(e)}"})
+
+
+class GetJobMatchScore(BaseModel):
+    username: str
+    skills: List[str]
+    job_description: str
+
+@app.post("/get-job-match-score")
+def get_job_match_score(request: GetJobMatchScore):
+    try:
+        response = getJobMatchScore(request.skills, request.username, request.job_description)
         return JSONResponse(status_code=200, content=response)
     except HTTPException as http_exc:
         return JSONResponse(status_code=http_exc.status_code, content={"detail": http_exc.detail})
