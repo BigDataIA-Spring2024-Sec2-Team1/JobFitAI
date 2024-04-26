@@ -6,8 +6,8 @@ import os
 from pymongo import MongoClient
 from pymongo.errors import ConnectionFailure, ServerSelectionTimeoutError
 
-# path = "/app/cred.yaml" # when you are using docker uncomment this and commont belows path
-path = "cred.yaml"
+path = "/app/cred.yaml" # when you are using docker uncomment this and commont belows path
+# path = "cred.yaml"
 with open(path) as file:
     config = yaml.load(file, Loader=SafeLoader)
 

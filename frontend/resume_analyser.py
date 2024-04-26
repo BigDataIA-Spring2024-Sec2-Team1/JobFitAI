@@ -4,7 +4,7 @@ import json
 
 def resume_analyser():
 
-    url = "http://localhost:8000"
+    url = "http://backend:8000"
 
     if 'user_resume_keywords' not in st.session_state:
         st.session_state.user_resume_keywords = []

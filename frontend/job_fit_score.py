@@ -6,7 +6,7 @@ def job_fit_score():
     if "score" not in st.session_state:
         st.session_state["score"] = ""
 
-    url = "http://localhost:8000"
+    url = "http://backend:8000"
 
     if st.session_state["resume_file_name"]:
         st.write(f"Matching Job Description with - {st.session_state.get('resume_file_name')}")
