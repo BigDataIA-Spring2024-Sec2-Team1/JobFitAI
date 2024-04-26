@@ -17,6 +17,7 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 from dotenv import load_dotenv
 load_dotenv()
 import os
+from database import connect_to_mongodb
 
 
 AWS_ACCESS_KEY_ID =  os.getenv("AWS_ACCESS_KEY_ID")
@@ -301,4 +302,24 @@ def suggestKeywords(similar_skills, resume_text, designation, num_of_skills):
         return {"response": response, "top_k": response_top_k}
     except Exception as e:
         print("error in suggestKeyword", e)
+        raise HTTPException(status_code=500, detail=f"An unexpected error occurred: {e}")
+
+
+def addSkillToUserDB(skills, username):
+    try:
+        db = connect_to_mongodb()
+        collection = db["User"]
+        user_document = collection.find_one({"username": username})
+        if user_document:
+            user_skills = {
+                "user_id": user_document["_id"],
+                "skills": skills,
+                "username": username
+            }
+            collection = db["user_skills"]
+            result = collection.insert_one(user_skills)
+        else:
+            print("User not found.")
+    except Exception as e:
+        print("error in addskilltouserdb", e)
         raise HTTPException(status_code=500, detail=f"An unexpected error occurred: {e}")
