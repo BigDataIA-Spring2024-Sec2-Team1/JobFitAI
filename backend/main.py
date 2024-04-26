@@ -1,13 +1,18 @@
+from typing import List
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 import boto3
 import requests
+from utils import getJobSuggesions
+from datetime import datetime
 import warnings
+from pydantic import BaseModel
 import os
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
-
+# import nltk
+# nltk.download('stopwords')
 load_dotenv()
 
 warnings.filterwarnings("ignore")
@@ -49,6 +54,40 @@ app.add_middleware(
 @app.get("/")
 def hello():
     return {"message": "Backend is running"}
+
+
+class UserSkillDB(BaseModel):
+    skills: List[str]
+    username: str
+
+
+class JobPosting(BaseModel):
+    title: str
+    company: str
+    location: str
+    description: str
+    apply_url: str
+    listed_at: int
+    job_id: int
+    job_posted: datetime
+
+    @classmethod
+    def parse_obj(cls, obj):
+        # Validate and parse the dictionary into the Pydantic model
+        return cls(**obj)
+
+class UserSkillDB(BaseModel):
+    skills: List[str]
+    username: str
+    
+class UserName(BaseModel):
+    username: str
+    
+@app.post("/getJobSuggesions")
+def getSuggesions(request: UserName):
+    username = request.username
+    job_descriptions = getJobSuggesions(username)
+    return {"data": {"job_descriptions": job_descriptions}}
 
 
 def triggerAirFlowPipeline(s3_url):

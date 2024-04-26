@@ -27,11 +27,14 @@ def getprofile():
 
 def get_jobs_details(**kwargs):
     try:
+        print("get_jobs_details")
+        print("get_jobs_details")
         ti = kwargs['ti']
         search_keywords = ""
-        limit = 15
+        _limit = 100
         location = "USA"
         jobs = api.search_jobs(keywords=search_keywords,
+                               limit=_limit,
                                location_name=location)
 
         job_posting_data_list = []
@@ -99,7 +102,7 @@ def parse_job_posting(**kwargs):
                     time.sleep(0.1)
                 # time
                 # pass
-        ti.xcom_push(key="jobs_data", value=job_posting_list)
+        ti.xcom_push(key="job_posting_list", value=job_posting_list)
     else:
         ti.xcom_push(key="jobs_data", value=[])
     # return job_posting_list
