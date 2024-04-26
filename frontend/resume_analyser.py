@@ -27,6 +27,8 @@ def resume_analyser():
         progress_bar = st.progress(0)
         if st.button("Upload to S3"):
             files = {"file": (uploaded_file.name, uploaded_file.getvalue())}
+            st.session_state["resume_file_name"] = uploaded_file.name
+            print("file name is", uploaded_file.name)
             response = requests.post(f"{url}/upload", files=files)
             if response.status_code == 200:
                 st.toast("File uploaded successfully to S3! We are currently parsing your resume")
