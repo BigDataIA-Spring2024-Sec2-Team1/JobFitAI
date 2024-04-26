@@ -11,11 +11,11 @@ credentials:
       name: John Smith
       password: $2b$12$S6vBKodNi4ELJk.OnhGV6u7EuD3FOzHnXe4ItNrXvGJymzw0WeGfi
     pqr:
-      email: pqr@abc.com
+      email: pqr@gmail.com
       failed_login_attempts: 0
       logged_in: false
       name: pqr
-      password: $2b$12$gOhU2SViyodiG//ek3HSUegKav0DKBIEkPrAdUucxcRJ9JGFEKLhW
+      password: $2b$12$9ZzDBUqpLgligKs/Q0u7lev1jhkUZHZuP02xOwGKQmvdi0JbuHjs.
 pre-authorized:
   emails:
   - melsby@gmail.com
