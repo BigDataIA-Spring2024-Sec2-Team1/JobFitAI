@@ -362,13 +362,12 @@ def addSkillToUserDB(skills, username):
             status_code=500, detail=f"An unexpected error occurred: {e}")
 
 
-db = connect_to_mongodb()
-
 
 def getJobSuggesions(username=""):
     try:
         job_descriptions = []
         if username:
+            db = connect_to_mongodb()
             collection = db["User"]
             user_document = collection.find_one({"username": username})
             if user_document:
