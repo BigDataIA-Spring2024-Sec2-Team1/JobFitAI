@@ -387,7 +387,6 @@ def getJobSuggesions(username=""):
                     match_res = index.query(top_k=100, vector=xqq,
                                             namespace="description", include_metadata=True)
                     result_list = match_res["matches"]
-                    # jobids = extract_job_ids()
                     jobids = [res["id"] for res in result_list]
                     print(jobids)
 
@@ -415,13 +414,3 @@ def getJobSuggesions(username=""):
     except Exception as e:
         raise HTTPException(
             status_code=500, detail=f"An unexpected error occurred: {e}")
-
-
-def extract_job_ids(json_file_path="/Users/sudarshan/Big_Data/JobFitAI/backend/jobfit.scraped_jobs.json"):
-    job_ids = []
-    with open(json_file_path, "r") as file:
-        data = json.load(file)
-        for entry in data:
-            if "job_id" in entry:
-                job_ids.append(int(entry["job_id"]["$numberLong"]))
-    return job_ids
