@@ -21,16 +21,13 @@ def initialize_session_state():
 def page_navigation():
     if st.session_state.get("authentication_status", False):
         st.sidebar.title(f"Hello {st.session_state.get('name')}")
-        page = st.sidebar.radio(
-            "", ("Resume Analyser", "Job Fit Score", "Page 2"))
+        page = st.sidebar.radio("", ("Resume Analyser", "Job Fit Score", "Job Recommendations"))
 
         if page == "Resume Analyser":
             resume_analyser()
         elif page == "Job Fit Score":
             job_fit_score()
-        elif page == "Page 2":
-            st.title("Page 2")
-            st.write("This is Page 2.")
+        elif page == "Job Recommendations":
             get_job_recommendations()
 
         logout()
