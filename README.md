@@ -4,15 +4,16 @@
 
 - Please use this application responsibly, as we have limited free credits remaining.
 
-[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)](http://34.148.167.159:8051/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)](http://34.138.24.242:8501/)
 
-[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=FastAPI&logoColor=white)](http://34.148.167.159:8050/docs)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=FastAPI&logoColor=white)](http://34.138.24.242:8000/docs)
 
-[![Apache Airflow](https://img.shields.io/badge/Apache_Airflow-007A88?style=for-the-badge&logo=Apache%20Airflow&logoColor=white)](http://34.138.127.169:8080/)
+[![Apache Airflow](https://img.shields.io/badge/Apache_Airflow-007A88?style=for-the-badge&logo=Apache%20Airflow&logoColor=white)](http://34.138.24.242:8024/)
 
-[![codelabs](https://img.shields.io/badge/codelabs-4285F4?style=for-the-badge&logo=codelabs&logoColor=white)](https://codelabs-preview.appspot.com/?file_id=1vgMyIUyW9-KYcdxPMUs-lFjF9gVwKMT2BpwPWluPthc/edit#0)
+[![Demo Link](https://img.shields.io/badge/Demo_Link-808080?style=for-the-badge&logo=YouTube&logoColor=white)](https://youtu.)
 
-[![Demo Link](https://img.shields.io/badge/Demo_Link-808080?style=for-the-badge&logo=YouTube&logoColor=white)](https://youtu.be/DnmAYNL0kcI)
+[![Codelab](https://img.shields.io/badge/Codelab-4B4BFF?style=for-the-badge&logo=Codelab&logoColor=white)](https://codelabs-preview.appspot.com/?file_id=1vgMyIUyW9-KYcdxPMUs-lFjF9gVwKMT2BpwPWluPthc/edit#0)
+
 
 
 
@@ -43,20 +44,36 @@ Job seekers struggling to tailor their resumes for specific job roles can levera
 
 ## Technologies Used :computer:
 
-[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)](https://streamlit.io/)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
-[![FastAPI](https://img.shields.io/badge/fastapi-109989?style=for-the-badge&logo=FASTAPI&logoColor=white)](https://fastapi.tiangolo.com/)
-[![Amazon AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)](https://aws.amazon.com/)
-[![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)](https://www.python.org/)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
-[![Pandas](https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
-[![NumPy](https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
-[![Apache Airflow](https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=Apache%20Airflow&logoColor=white)](https://airflow.apache.org/)
-[![GitHub Actions](https://img.shields.io/badge/Github%20Actions-282a2e?style=for-the-badge&logo=githubactions&logoColor=367cfe)](https://github.com/features/actions)
+[![Apache Airflow](https://img.shields.io/badge/Apache%20Airflow-2.9.0-017CEE?style=for-the-badge&logo=Apache%20Airflow&logoColor=white)](https://airflow.apache.org/)
+[![Beautiful Soup](https://img.shields.io/badge/Beautiful%20Soup-4.12.3-3776AB?style=for-the-badge&logo=Python&logoColor=white)](https://pypi.org/project/beautifulsoup4/)
+[![Boto3](https://img.shields.io/badge/Boto3-1.34.74-FF9900?style=for-the-badge&logo=Amazon%20AWS&logoColor=white)](https://github.com/boto/boto3)
+[![Botocore](https://img.shields.io/badge/Botocore-1.34.74-FF9900?style=for-the-badge&logo=Amazon%20AWS&logoColor=white)](https://github.com/boto/botocore)
+[![Diagrams](https://img.shields.io/badge/Diagrams-0.23.4-009688?style=for-the-badge&logo=Python&logoColor=white)](https://diagrams.mingrammer.com/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.110.2-009688?style=for-the-badge&logo=FastAPI&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Jobspy](https://img.shields.io/badge/Jobspy-0.29.0-4CAF50?style=for-the-badge&logo=Python&logoColor=white)](https://pypi.org/project/jobspy/)
+[![LinkedIn API](https://img.shields.io/badge/LinkedIn%20API-2.1.1-0077B5?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://github.com/ozgur/python-linkedin)
+[![NLTK](https://img.shields.io/badge/NLTK-3.8.1-FF6F00?style=for-the-badge&logo=Python&logoColor=white)](https://www.nltk.org/)
+[![OpenAI](https://img.shields.io/badge/OpenAI-1.23.6-FF6F00?style=for-the-badge&logo=OpenAI&logoColor=white)](https://openai.com/)
+[![Pandas](https://img.shields.io/badge/Pandas-2.2.2-2C2D72?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![Pinecone](https://img.shields.io/badge/Pinecone-0.1.0-4CAF50?style=for-the-badge&logo=Python&logoColor=white)](https://www.pinecone.io/)
+[![Pydantic](https://img.shields.io/badge/Pydantic-2.7.1-009688?style=for-the-badge&logo=Python&logoColor=white)](https://pydantic-docs.helpmanual.io/)
+[![Pydparser](https://img.shields.io/badge/Pydparser-1.0.4-4CAF50?style=for-the-badge&logo=Python&logoColor=white)](https://pypi.org/project/pydparser/)
+[![PyMongo](https://img.shields.io/badge/PyMongo-3.13.0-47A248?style=for-the-badge&logo=Python&logoColor=white)](https://pymongo.readthedocs.io/en/stable/)
+[![Python-Dotenv](https://img.shields.io/badge/Python%20Dotenv-1.0.1-4CAF50?style=for-the-badge&logo=Python&logoColor=white)](https://github.com/theskumar/python-dotenv)
+[![PyTZ](https://img.shields.io/badge/PyTZ-2024.1-FF6F00?style=for-the-badge&logo=Python&logoColor=white)](https://pypi.org/project/pytz/)
+[![PyYAML](https://img.shields.io/badge/PyYAML-6.0-FFD43B?style=for-the-badge&logo=Python&logoColor=white)](https://pyyaml.org/)
+[![Requests](https://img.shields.io/badge/Requests-2.31.0-47A248?style=for-the-badge&logo=Python&logoColor=white)](https://docs.python-requests.org/en/master/)
+[![Rich](https://img.shields.io/badge/Rich-13.7.1-009688?style=for-the-badge&logo=Python&logoColor=white)](https://rich.readthedocs.io/en/stable/)
+[![Selenium](https://img.shields.io/badge/Selenium-4.20.0-43B02A?style=for-the-badge&logo=Selenium&logoColor=white)](https://www.selenium.dev/)
+[![SkillNer](https://img.shields.io/badge/SkillNer-1.0.3-4CAF50?style=for-the-badge&logo=Python&logoColor=white)](https://pypi.org/project/skillNer/)
+[![Spacy](https://img.shields.io/badge/Spacy-3.7.2-09A3D5?style=for-the-badge&logo=Python&logoColor=white)](https://spacy.io/)
+[![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-1.4.52-FF4500?style=for-the-badge&logo=Python&logoColor=white)](https://www.sqlalchemy.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.33.0-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)](https://streamlit.io/)
+[![Streamlit Authenticator](https://img.shields.io/badge/Streamlit%20Authenticator-0.3.2-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)](https://github.com/whitphx/streamlit-authenticator)
 
 ## Data Source :flashlight:
 
-Dataset consisting of job descriptions and resumes obtained from various sources are used as data sources.
+The data is sourced from job portals such as LinkedIn and Glassdoor to access the latest available job positions. Additionally, datasets from Kaggle and Hugging Face are utilized for keywords.
 
 ## Process Outline :
 **1. Data Acquisition:** Users upload their resumes and desired job descriptions through a user-friendly interface.
@@ -68,81 +85,130 @@ Dataset consisting of job descriptions and resumes obtained from various sources
 **4. AI-powered Enhancement:** Integrate Chat GPT to generate insightful and personalized suggestions for further resume optimization.
 **5. User Interface:** Develop a user-friendly Streamlit application to display extracted skills, recommended improvements, job recommendations, and AI-powered suggestions.
 
-## Project Setup
-
-<img width="607" alt="image" src="https://user-images.githubusercontent.com/114537365/234988315-a9f89c76-b0ac-413c-9f4b-977eb7c5eab9.png">
-
-
 ## Requirements :briefcase:
 ```
-fastapi==0.92.0
-
-pydantic==1.10.4
-
-openai==0.27.0
-
-🖼streamlit==1.18.1
+apache-airflow==2.9.0
+beautifulsoup4==4.12.3
+boto3==1.34.74
+botocore==1.34.74
+diagrams==0.23.4
+en_core_web_sm==2.3.1
+fastapi==0.110.2
+jobspy==0.29.0
+linkedin_api==2.1.1
+nltk==3.8.1
+openai==1.23.6
+pandas==2.2.2
+pinecone==0.1.0
+pydantic==2.7.1
+pydparser==1.0.4
+pymongo==3.13.0
+python-dotenv==1.0.1
+pytz==2023.3
+pytz==2024.1
+PyYAML==6.0
+PyYAML==6.0.1
+Requests==2.31.0
+rich==13.7.1
+selenium==4.20.0
+skillNer==1.0.3
+spacy==3.7.2
+SQLAlchemy==1.4.52
+streamlit==1.33.0
+streamlit_authenticator==0.3.2
 ```
 
 ## Project Folder Structure :
 
 ```
 📦 Final-Project-Playground
-├─ .github
-│  └─ workflows
-│     └─ pytest.yml
-├─ .gitignore
-├─ Airflow
-│  └─ Dags
-│     ├─ README.md
-│     ├─ db_update.py
-│     ├─ ge_report.py
-│     └─ issue_embedding_and_storing.py
-├─ Dockerfile
-├─ README.md
-├─ __init__.py
-├─ backend
-│  ├─ .DS_Store
-│  ├─ Dockerfile
-│  ├─ __init__.py
-│  ├─ database.py
-│  ├─ hashing.py
-│  ├─ main.py
-│  ├─ models.py
-│  ├─ requirements.txt
-│  └─ schema.py
-├─ bert_download.py
-├─ docker-compose.yml
-├─ great_expectations
-│  ├─ .gitignore
-│  ├─ README.md
-│  ├─ checkpoints
-│  │  ├─ github_issues_checkpoint_v0.yml
-│  │  └─ github_issues_checkpoint_v1.yml
-│  ├─ expectations
-│  │  ├─ .ge_store_backend_id
-│  │  └─ github_issues_suite.json
-│  ├─ great_expectations.yml
-│  └─ plugins
-│     └─ custom_data_docs
-│        └─ styles
-│           └─ data_docs_custom_styles.css
-├─ navigation
-│  ├─ __init__.py
-│  ├─ adminworkarea.py
-│  ├─ analytics.py
-│  ├─ errorsearch.py
-│  └─ issuesearch.py
-├─ pyrequirements.txt
-├─ requirements.txt
-├─ unit_testing.py
-├─ userinterface.py
-└─ utils
-   ├─ __init__.py
-   └─ core_helpers.py
+├── Dockerfile
+├── README.md
+├── __pycache__
+│   └── constants.cpython-311.pyc
+├── __test__
+│   └── main.py
+├── architecture.py
+├── assets
+│   ├── csv.jpeg
+│   ├── linkedin_logo.png
+│   ├── openai.png
+│   ├── pinecone.png
+│   ├── streamlit.png
+│   └── user.png
+├── backend
+│   ├── Dockerfile
+│   ├── __pycache__
+│   │   ├── constants.cpython-311.pyc
+│   │   ├── database.cpython-311.pyc
+│   │   ├── job_match_score.cpython-311.pyc
+│   │   ├── pinecone_util.cpython-311.pyc
+│   │   ├── resume_analyser.cpython-311.pyc
+│   │   └── utils.cpython-311.pyc
+│   ├── constants.py
+│   ├── database.py
+│   ├── datetime_manage.py
+│   ├── job_match_score.py
+│   ├── pinecone_util.py
+│   ├── requirements.txt
+│   ├── resume_analyser.py
+│   └── utils.py
+├── config
+├── constants.py
+├── dags
+│   ├── __pycache__
+│   │   └── workflow.cpython-312.pyc
+│   ├── tasks
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   └── scrape.cpython-312.pyc
+│   │   ├── datetime_manage.py
+│   │   ├── embeddings.py
+│   │   ├── linkedIn.py
+│   │   ├── linkedIn_util.py
+│   │   ├── manage_mongo_db.py
+│   │   ├── pydantic_models copy.py
+│   │   ├── pydantic_models.py
+│   │   ├── scrape.py
+│   │   └── util.py
+│   └── workflow.py
+├── docker-compose.yaml
+├── frontend
+│   ├── Dockerfile
+│   ├── __pycache__
+│   │   ├── auth.cpython-311.pyc
+│   │   ├── job_fit_score.cpython-311.pyc
+│   │   ├── job_recomendation.cpython-311.pyc
+│   │   └── resume_analyser.cpython-311.pyc
+│   ├── auth.py
+│   ├── cred.yaml
+│   ├── job_fit_score.py
+│   ├── job_recomendation.py
+│   ├── main.py
+│   ├── requirements.txt
+│   └── resume_analyser.py
+├── main.py
+├── plugins
+├── project.ipynb
+├── requirements.txt
+├── scripts
+│   ├── Embeddings.ipynb
+│   ├── JobSpy_Demo.ipynb
+│   ├── LinkedIn.ipynb
+│   ├── __pycache__
+│   │   ├── skillExtracter.cpython-311.pyc
+│   │   └── util.cpython-311.pyc
+│   ├── build_knowledge_jd.ipynb
+│   ├── building_knowledge_resume.ipynb
+│   ├── job_scraping.py
+│   ├── project.ipynb
+│   ├── requirements.txt
+│   ├── resume_embedding.csv
+│   ├── skillExtracter.py
+│   └── util.py
+└── setup.sh
 ```
-©generated by [Project Tree Generator](https://woochanleee.github.io/project-tree-generator)
-
 
 ## How to run Application locally :rocket:
 
@@ -154,45 +220,27 @@ To run the application locally, follow these steps:
 
 3. Create a .env file in the root directory with the following variables:
 
-    GITHUB_API_TOKEN: your GitHub API token.
+    OPENAI_API_KEY: your OpenAI API key
 
-    SNOWFLAKE_USER: your Snowflake username.
+    PINECONE_API_KEY: your Pinecone API key
 
-    SNOWFLAKE_PASSWORD: your Snowflake password.
+    AWS_ACCESS_KEY_ID: your AWS access ID
 
-    SNOWFLAKE_ACCOUNT: your Snowflake account name.
+    AWS_SECRET_ACCESS_KEY: your AWS secret key
 
-    SNOWFLAKE_DATABASE: the name of the Snowflake database to use.
+    S3_BUCKET_NAME: S3 bucket name
 
-    SNOWFLAKE_SCHEMA: the name of the Snowflake schema to use.
+4. Once you have set up your environment variables, start Airflow and Application by running the following command
 
-    ACESS_TOKEN: Your Github Acess token
+`docker-compose up airflow-init && docker-compose up -d`
 
-    SECRET_KEY: "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7" - for JWT Hashing
-
-    ALGORITHM: "HS256" - - for JWT Hashing
-
-    ACCESS_TOKEN_EXPIRE_MINUTES: The expiration time of the access token in minutes
-
-    OPENAI_API_KEY: Your OpenAI API key for accessing the GPT model.
-
-4. Once you have set up your environment variables, start Airflow by running the following command from the root directory:
-
-docker-compose up airflow-init && docker-compose up -d
-
-5. Access the Airflow UI by navigating to http://localhost:8080/ in your web browser.
+5. Access the Airflow UI by navigating to `http://localhost:8024/` in your web browser.
 
 6. To run the DAG in Airflow, click on the dag link on the Airflow UI and toggle the switch to enable the DAGs.
 
-7. Once the DAGs have run successfully, start the Streamlit application by running the following command from the streamlit-app directory:
+7. Once the DAGs have run successfully,
 
-docker-compose up
-
-8. Access the Streamlit UI by navigating to http://localhost:8501/ in your web browser.
-
-## Github Actions - Testing
-
-<img width="1512" alt="image" src="https://user-images.githubusercontent.com/114537365/235001553-2dc11cd4-9131-48d2-a57b-75b302aeb372.png">
+8. Access the Streamlit UI by navigating to `http://localhost:8501/` in your web browser.
 
 ## References :books:
 - https://code.visualstudio.com/docs/python/tutorial-fastapiLinks
@@ -224,5 +272,6 @@ Name            | Contribution % | Contribution                         |
 Aniket Giram    | 33.33%         |Text, keywords extraction, Embeddings |
 Sudarshan Dudhe | 33.33%         |Backend, pytest, testing              |
 Rasika Kole     | 33.33%         |Frontend, Backend, Documentation      |
+Detail tasks are added in codelab
 
 
