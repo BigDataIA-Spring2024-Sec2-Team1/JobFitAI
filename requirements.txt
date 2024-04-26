@@ -1,2 +1,6 @@
+apache-airflow-providers-mongo==3.0.0
 python-docx
 PyPDF2
+linkedin-api
+pydantic
+python-jobspy

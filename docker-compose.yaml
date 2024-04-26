@@ -97,7 +97,7 @@ services:
       interval: 10s
       retries: 5
       start_period: 5s
-    restart: always
+    # restart: always
 
   redis:
     image: redis:latest
@@ -109,7 +109,7 @@ services:
       timeout: 30s
       retries: 50
       start_period: 30s
-    restart: always
+    # restart: always
 
   airflow-webserver:
     <<: *airflow-common
@@ -137,7 +137,7 @@ services:
       timeout: 10s
       retries: 5
       start_period: 30s
-    restart: always
+    # restart: always
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -163,7 +163,7 @@ services:
       S3_BUCKET_NAME: ${S3_BUCKET_NAME}
       AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
       AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
-    restart: always
+    # restart: always
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -180,7 +180,7 @@ services:
       timeout: 10s
       retries: 5
       start_period: 30s
-    restart: always
+    # restart: always
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -279,7 +279,7 @@ services:
       timeout: 10s
       retries: 5
       start_period: 30s
-    restart: always
+    # restart: always
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
