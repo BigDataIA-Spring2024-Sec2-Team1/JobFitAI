@@ -20,6 +20,8 @@ Streamlit Login:
 username: aniket
 password: aniket
 
+Resume and Job description for demo: https://drive.google.com/drive/folders/1m1yMmF6372qY8z2OD7hg2uU0jsa9c6r3?usp=sharing
+
 ## Abstract :memo: 
 
 The "JobFit AI" project introduces an innovative AI-driven Applicant Tracking System (ATS) aimed at optimizing the resume tailoring process. It facilitates seamless communication between users and the application through a Streamlit frontend and FastAPI backend. By leveraging cutting-edge technologies such as OpenAI's GPT, the system offers personalized suggestions for resume enhancement, empowering users to tailor their resumes to specific job requirements effectively.
