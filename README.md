@@ -10,7 +10,7 @@
 
 [![Apache Airflow](https://img.shields.io/badge/Apache_Airflow-007A88?style=for-the-badge&logo=Apache%20Airflow&logoColor=white)](https://tinyurl.com/jddag)
 
-[![Demo Link](https://img.shields.io/badge/Demo_Link-808080?style=for-the-badge&logo=YouTube&logoColor=white)](https://youtu.)
+[![Demo Link](https://img.shields.io/badge/Demo_Link-808080?style=for-the-badge&logo=YouTube&logoColor=white)](https://youtu.be/UyE7B184TPE)
 
 [![Codelab](https://img.shields.io/badge/Codelab-4B4BFF?style=for-the-badge&logo=Codelab&logoColor=white)](https://codelabs-preview.appspot.com/?file_id=1vgMyIUyW9-KYcdxPMUs-lFjF9gVwKMT2BpwPWluPthc/edit#0)
 
@@ -279,4 +279,8 @@ Sudarshan Dudhe | 33.33%         |Backend, pytest, testing              |
 Rasika Kole     | 33.33%         |Frontend, Backend, Documentation      |
 Detail tasks are added in codelab
 
+## Contact Information
 
+Aniket Giram: giram.a@northeastern.edu
+Sudarshan Dudhe: dudhe.s@northeastern.edu
+Rasika Kole: kole.r@northeastern.edu
