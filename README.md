@@ -2,13 +2,6 @@
 
 ## Live application Links :octopus:
 
-- Please use this application responsibly, as we have limited free credits remaining.
-
-[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)](http://34.138.24.242:8501/)
-
-[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=FastAPI&logoColor=white)](http://34.138.24.242:8000/docs)
-
-![Apache Airflow](https://img.shields.io/badge/Apache_Airflow-007A88?style=for-the-badge&logo=Apache%20Airflow&logoColor=white)
 
 [![Demo Link](https://img.shields.io/badge/Demo_Link-808080?style=for-the-badge&logo=YouTube&logoColor=white)](https://youtu.be/UyE7B184TPE)
 
